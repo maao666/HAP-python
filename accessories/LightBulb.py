@@ -10,10 +10,10 @@ class LightBulb(Accessory):
     category = CATEGORY_LIGHTBULB
 
     @classmethod
-    '''def _gpio_setup(_cls, pin):
-        if GPIO.getmode() is None:
-            GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(pin, GPIO.OUT)'''
+    #def _gpio_setup(_cls, pin):
+        #if GPIO.getmode() is None:
+            #GPIO.setmode(GPIO.BOARD)
+        #GPIO.setup(pin, GPIO.OUT)
 
     def __init__(self, *args, pin=11, **kwargs):
         super().__init__(*args, **kwargs)
