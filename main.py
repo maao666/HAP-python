@@ -31,7 +31,7 @@ def get_bridge(driver):
 
 def get_accessory(driver):
     """Call this method to get a standalone Accessory."""
-    return LightBulb(driver, 'Unicorn')
+    return LightBulb(driver, 'Unicorn', aid = None)
 
 
 # Start the accessory on port 54661
