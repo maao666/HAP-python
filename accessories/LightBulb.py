@@ -15,14 +15,14 @@ class LightBulb(Accessory):
             #GPIO.setmode(GPIO.BOARD)
         #GPIO.setup(pin, GPIO.OUT)
 
-    def __init__(self, *args, pin=11, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         serv_light = self.add_preload_service('Lightbulb')
         self.char_on = serv_light.configure_char(
             'On', setter_callback=self.set_bulb)
 
-        self.pin = pin
+        #self.pin = pin
 
         #self._gpio_setup(pin)
 
