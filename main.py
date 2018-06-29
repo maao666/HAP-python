@@ -18,15 +18,15 @@ from accessories.LightBulb import LightBulb
 logging.basicConfig(level=logging.INFO)
 
 
-"""def get_bridge(driver):
+def get_bridge(driver):
     #Call this method to get a Bridge instead of a standalone accessory.
     bridge = Bridge(driver, 'Bridge')
-    temp_sensor = LightBulb(driver, 'Sensor 2')
-    temp_sensor2 = LightBulb(driver, 'Sensor 1')
-    bridge.add_accessory(temp_sensor)
-    bridge.add_accessory(temp_sensor2)
+    LightBulb = LightBulb(driver, 'LightBulb 2')
+    LightBulb2 = LightBulb(driver, 'LightBulb 1')
+    bridge.add_accessory(LightBulb)
+    bridge.add_accessory(LightBulb)
 
-    return bridge"""
+    return bridge
 
 
 def get_accessory(driver):
