@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 """def get_bridge(driver):
-    """Call this method to get a Bridge instead of a standalone accessory."""
+    #Call this method to get a Bridge instead of a standalone accessory.
     bridge = Bridge(driver, 'Bridge')
     temp_sensor = LightBulb(driver, 'Sensor 2')
     temp_sensor2 = LightBulb(driver, 'Sensor 1')
