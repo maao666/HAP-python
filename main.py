@@ -29,9 +29,9 @@ def get_bridge(driver):
     return bridge
 
 
-def get_accessory(driver):
+#def get_accessory(driver):
     """Call this method to get a standalone Accessory."""
-    return LightBulb(driver, 'Unicorn', aid = None)
+    #return LightBulb(driver, 'Unicorn', aid = None)
 
 
 # Start the accessory on port 54661
