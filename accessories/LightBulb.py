@@ -45,7 +45,16 @@ class LightBulb(Accessory):
                     time.sleep(0.05)
 
         else:
-            unicorn.clear()
+            print('INFO: Variable value has been set to', value)
+            unicorn.set_layout(unicorn.AUTO)
+            unicorn.rotation(0)
+            unicorn.brightness(0.5)
+            width,height=unicorn.get_shape()
+            for y in range(height):
+                for x in range(width):
+                    unicorn.set_pixel(x,y,0,0,0)
+                    unicorn.show()
+                    time.sleep(0.05)
 
     def stop(self):
         super().stop()
