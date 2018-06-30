@@ -13,7 +13,7 @@ from pyhap.accessory_driver import AccessoryDriver
 import pyhap.loader as loader
 
 # The below package can be found in the HAP-python github repo under accessories/
-from accessories.LightBulb import LightBulb
+from accessories.TemperatureSensor import TemperatureSensor
 
 logging.basicConfig(level=logging.INFO)
 
@@ -21,8 +21,8 @@ logging.basicConfig(level=logging.INFO)
 def get_bridge(driver):
     """Call this method to get a Bridge instead of a standalone accessory."""
     bridge = Bridge(driver, 'Bridge')
-    temp_sensor = LightBulb(driver, 'Sensor 2')
-    temp_sensor2 = LightBulb(driver, 'Sensor 1')
+    temp_sensor = TemperatureSensor(driver, 'Sensor 2')
+    temp_sensor2 = TemperatureSensor(driver, 'Sensor 1')
     bridge.add_accessory(temp_sensor)
     bridge.add_accessory(temp_sensor2)
 
@@ -31,7 +31,7 @@ def get_bridge(driver):
 
 def get_accessory(driver):
     """Call this method to get a standalone Accessory."""
-    return LightBulb(driver, 'MyTempSensor')
+    return TemperatureSensor(driver, 'MyTempSensor')
 
 
 # Start the accessory on port 51826
