@@ -36,7 +36,7 @@ class LightBulb(Accessory):
             os.system('/home/pi/HAP-python/unicorn.sh &')
             #GPIO.output(self.pin, GPIO.HIGH)
         else:
-            os.system('killall unicorn.sh')
+            os.system('sudo killall unicorn.sh')
             #GPIO.output(self.pin, GPIO.LOW)
 
     def stop(self):
