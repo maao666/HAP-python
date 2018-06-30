@@ -25,12 +25,6 @@ class LightBulb(Accessory):
 
         serv_light = self.add_preload_service('Lightbulb')
         self.char_on = serv_light.configure_char('On', setter_callback=self.set_bulb)
-        '''Initialize Unicorn HAT'''
-        print('Initializing Unicorn HAT')
-        unicorn.set_layout(unicorn.AUTO)
-        unicorn.rotation(0)
-        unicorn.brightness(0.5)
-        width,height=unicorn.get_shape()
 
     def __setstate__(self, state):
         self.__dict__.update(state)
@@ -38,6 +32,12 @@ class LightBulb(Accessory):
     def set_bulb(self, value):
         if value:
             print('INFO: Variable value has been set to', value)
+            '''Initialize Unicorn HAT'''
+            print('Initializing Unicorn HAT')
+            unicorn.set_layout(unicorn.AUTO)
+            unicorn.rotation(0)
+            unicorn.brightness(0.5)
+            width,height=unicorn.get_shape()
             for y in range(height):
                 for x in range(width):
                     unicorn.set_pixel(x,y,255,255,255)
@@ -49,4 +49,5 @@ class LightBulb(Accessory):
 
     def stop(self):
         super().stop()
+        print('Clearing Unicorn HAT...')
         unicorn.clear()
