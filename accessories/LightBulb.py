@@ -11,6 +11,7 @@ class LightBulb(Accessory):
 
     @classmethod
     def _gpio_setup(_cls, pin):
+        print('hi')
         #if GPIO.getmode() is None:
             #GPIO.setmode(GPIO.BOARD)
         #GPIO.setup(pin, GPIO.OUT)
