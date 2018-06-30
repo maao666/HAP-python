@@ -36,7 +36,7 @@ class LightBulb(Accessory):
             print('Initializing Unicorn HAT')
             unicorn.set_layout(unicorn.AUTO)
             unicorn.rotation(0)
-            unicorn.brightness(0.5)
+            unicorn.brightness(1)
             width,height=unicorn.get_shape()
             for y in range(height):
                 for x in range(width):
@@ -48,7 +48,7 @@ class LightBulb(Accessory):
             print('INFO: Variable value has been set to', value)
             unicorn.set_layout(unicorn.AUTO)
             unicorn.rotation(0)
-            unicorn.brightness(0.5)
+            unicorn.brightness(0.1)
             width,height=unicorn.get_shape()
             for y in range(height):
                 for x in range(width):
