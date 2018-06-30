@@ -1,5 +1,6 @@
 # An Accessory for a LED attached to pin 11.
 import logging
+import os
 
 from pyhap.accessory import Accessory
 from pyhap.const import CATEGORY_LIGHTBULB
