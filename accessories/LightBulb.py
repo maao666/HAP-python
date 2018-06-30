@@ -32,7 +32,7 @@ class LightBulb(Accessory):
 
     def set_bulb(self, value):
         if value:
-            os.system('/home/pi/HAP-python/unicorn.sh')
+            os.system('/home/pi/HAP-python/unicorn.sh &')
             #GPIO.output(self.pin, GPIO.HIGH)
         else:
             os.system('killall unicorn.sh')
