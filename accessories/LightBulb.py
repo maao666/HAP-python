@@ -42,7 +42,7 @@ class LightBulb(Accessory):
                 for x in range(width):
                     unicorn.set_pixel(x,y,255,255,255)
                     unicorn.show()
-                    time.sleep(0.1)
+                    time.sleep(0.06)
 
         else:
             print('INFO: Variable value has been set to', value)
